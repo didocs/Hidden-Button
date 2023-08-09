@@ -9,9 +9,9 @@ let randomList = [], winner = "Wiiinner!!:)";
 function assignWinnerButton() {
 	let n = message.length, i;
 	while (n) {
-	i = Math.floor(Math.random() * n);
-	randomList.push(message.splice(i, 1)[0]);
-	--n;
+		i = Math.floor(Math.random() * n);
+		randomList.push(message.splice(i, 1)[0]);
+		--n;
 	}
 	return randomList;
 }
