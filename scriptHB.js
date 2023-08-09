@@ -1,6 +1,6 @@
 const body = document.querySelector('body');
 
-	body.onload = assignWinnerButton;
+body.onload = assignWinnerButton;
 
 let message = ["Wiiinner!!:)","Loooser!!:(", "Loooser!!:("];
 
