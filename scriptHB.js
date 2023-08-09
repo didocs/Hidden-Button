@@ -44,3 +44,5 @@ function flashLooser() {
 	let flashRed = document.getElementById(idBtn);
 	flashRed.className =  flashRed.className === "btn btn-outline-secondary"? "btn btn-outline-danger" : "btn btn-outline-secondary";
 }
+
+
