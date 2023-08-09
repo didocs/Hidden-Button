@@ -7,8 +7,8 @@ let message = ["Wiiinner!!:)","Loooser!!:(", "Loooser!!:("];
 let randomList = [], winner = "Wiiinner!!:)";
 
 function assignWinnerButton() {
-  let n = message.length, i;
-  while (n) {
+	let n = message.length, i;
+	while (n) {
     i = Math.floor(Math.random() * n);
     randomList.push(message.splice(i, 1)[0]);
     --n;
@@ -21,9 +21,9 @@ let idBtn;
 function winnerLooser(id) {
   let btn = document.getElementById(id);
   let index = id.valueOf();
-  btn.innerHTML = randomList[index];
-  idBtn = id;
-  flashLoop();
+	btn.innerHTML = randomList[index];
+	idBtn = id;
+	flashLoop();
 }
 
 function flashLoop() {
@@ -36,11 +36,11 @@ function flashLoop() {
 }
 
 function flashWinner() {
-  let flashGreen = document.getElementById(idBtn);
+	let flashGreen = document.getElementById(idBtn);
   flashGreen.className = flashGreen.className === "btn btn-outline-secondary"? "btn btn-outline-success" : "btn btn-outline-secondary";
 }
 
 function flashLooser() {
-  let flashRed = document.getElementById(idBtn);
+	let flashRed = document.getElementById(idBtn);
   flashRed.className =  flashRed.className === "btn btn-outline-secondary"? "btn btn-outline-danger" : "btn btn-outline-secondary";
 }
