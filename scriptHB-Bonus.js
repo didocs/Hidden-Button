@@ -31,30 +31,25 @@ function winnerLooser(id) {
     if (winnerBtn === Number(id)) {
         btn.innerText = "Wiiinner!!:)";
         btn.style.backgroundColor = "green";
-        flashWinner(id);
+        flashButton(id);
     } else {
         btn.innerText = "Loooser!!:(";
         btn.style.backgroundColor = "red";
-        flashLooser(id);;
+        flashButton(id);
     }
 }
 
-function flashWinner(id) {
-    let btnW = document.getElementById(id);
-    var toggleWinner = function() {
-        btnW.style.backgroundColor = btnW.style.backgroundColor === "green" ? "lightgray" : "green";
-        setTimeout(toggleWinner, 700);
+function flashButton(id) {
+    let btn = document.getElementById(id);
+    var toggleColor = function() {
+    	if (btn.innerText === "Wiiinner!!:)") {
+        	btn.style.backgroundColor = btn.style.backgroundColor === "green" ? "lightgray" : "green";
+        } else if (btn.innerText = "Loooser!!:(") {
+        	btn.style.backgroundColor = btn.style.backgroundColor === "red" ? "lightgray" : "red";
+        }
+        setTimeout(toggleColor, 700);
     }
-    toggleWinner();
-}
-
-function flashLooser(id) {
-    let btnL = document.getElementById(id);
-    var toggleLooser = function() {
-        btnL.style.backgroundColor = btnL.style.backgroundColor === "red" ? "lightgray" : "red";
-        setTimeout(toggleLooser, 700);
-    }
-    toggleLooser();
+    toggleColor();
 }
 
 function restart() {
