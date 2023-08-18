@@ -42,11 +42,8 @@ function winnerLooser(id) {
 function flashButton(id) {
     let btn = document.getElementById(id);
     var toggleColor = function() {
-    	if (btn.innerText === "Wiiinner!!:)") {
-        	btn.style.backgroundColor = btn.style.backgroundColor === "green" ? "lightgray" : "green";
-        } else if (btn.innerText = "Loooser!!:(") {
-        	btn.style.backgroundColor = btn.style.backgroundColor === "red" ? "lightgray" : "red";
-        }
+    	btn.style.backgroundColor = btn.style.backgroundColor === "green" ? "lightgray" : "green";
+        btn.style.backgroundColor = btn.style.backgroundColor === "red" ? "lightgray" : "red";
         setTimeout(toggleColor, 700);
     }
     toggleColor();
