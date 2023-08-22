@@ -27,23 +27,16 @@ function generateButtons() {
 }
 
 function winnerLooser(id) {
-    let btn = document.getElementById(id);
-    if (winnerBtn === Number(id)) {
-        btn.innerText = "Wiiinner!!:)";
-        btn.style.backgroundColor = "green";
-        flashButton(id);
-    } else {
-        btn.innerText = "Loooser!!:(";
-        btn.style.backgroundColor = "red";
-        flashButton(id);
-    }
+    Number(id) === winnerBtn ? flashButton(id, "Wiiinner!!:)", "green") : flashButton(id, "Looser!!:(", "red");
 }
 
-function flashButton(id) {
+function flashButton(id, text, color) {
+	let bgColor = color;
     let btn = document.getElementById(id);
+    btn.style.backgroundColor = color;
+    btn.innerText = text;
     var toggleColor = function() {
-    	btn.style.backgroundColor = btn.style.backgroundColor === "green" ? "lightgray" : "green";
-        btn.style.backgroundColor = btn.style.backgroundColor === "red" ? "lightgray" : "red";
+        btn.style.backgroundColor =  btn.style.backgroundColor === bgColor ? "lightgray" :bgColor;
         setTimeout(toggleColor, 700);
     }
     toggleColor();
