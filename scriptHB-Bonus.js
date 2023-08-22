@@ -1,7 +1,5 @@
 let noButtons, winnerBtn, noClicks = 0;
 
-let game = document.getElementById("buttonGame");
-
 function generateButtons() {
     ++noClicks;
     if (noClicks > 1) {
@@ -15,14 +13,13 @@ function generateButtons() {
     }
     for (let i = 0; i < noButtons; ++i) {
         let newButton = document.createElement("button");
-        let winnerBtn = Math.floor(Math.random() * noButtons);
         newButton.innerText = "$$$";
         newButton.id = i;
         newButton.classList.add("roundish");
         newButton.addEventListener("click", function() {
             winnerLooser(newButton.id)
         });
-        game.appendChild(newButton);
+        document.getElementById("buttonGame").appendChild(newButton);
     }
 }
 
